@@ -1,0 +1,31 @@
+﻿<Window x:Class="FitnessAppAlone.View.WindowMainInterface"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessAppAlone.View"
+        mc:Ignorable="d"
+        Title="WindowMainInterface" Height="450" Width="800">
+    <Grid>
+        <Border Margin="5">
+            <Border>
+                <StackPanel>
+                </StackPanel>
+            </Border>
+            <!--<Border>
+                <TabControl>
+                    <TabItem Header="User">
+                            <Grid Margin="5">
+
+                            </Grid>
+                        </TabItem>
+                    <TabItem Header="ExercisePlans">
+                            <Grid Margin="5">
+
+                            </Grid>
+                        </TabItem>
+                </TabControl>
+            </Border>-->
+        </Border>
+    </Grid>
+</Window>
