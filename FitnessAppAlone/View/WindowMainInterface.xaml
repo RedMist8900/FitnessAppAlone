@@ -6,10 +6,67 @@
         xmlns:local="clr-namespace:FitnessAppAlone.View"
         mc:Ignorable="d"
         Title="WindowMainInterface" Height="450" Width="800">
-    <Grid>
+    <Grid Background="Black">
         <Border Margin="5">
             <Border>
                 <StackPanel>
+                    <Grid Height="35" Background="LightGray">
+                        <Label Content="Fitness App" HorizontalAlignment="Center" FontSize="15" FontWeight="Bold"/>
+                        <Button x:Name="btnSignOut" Content="Sign Out" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    </Grid>
+                    <Grid Margin="3 3 3 3" Height="385">
+                        <TabControl>
+                            <TabItem Header="User">
+                                <Grid Background="LightGray">
+                                    <StackPanel Margin="5" VerticalAlignment="Center">
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                            <StackPanel HorizontalAlignment="Left" Width="150" Margin="10">
+                                                <Label Content="Change Email:" HorizontalAlignment="Stretch" Background="AliceBlue"/>
+                                                <TextBlock x:Name="tbEmailChange" Background="White" Height="25"/>
+                                                <Button x:Name="btnEmailChange" Background="LightYellow" Content="Change Email"/>
+                                            </StackPanel>
+                                            <StackPanel HorizontalAlignment="Center" Width="150" Margin="10">
+                                                <Label Content="Change User Name:" HorizontalAlignment="Stretch" Background="AliceBlue"/>
+                                                <TextBlock x:Name="tbEmilChange" Background="White" Height="25"/>
+                                                <Button x:Name="btnEmaiChange" Background="LightYellow" Content="Change Email"/>
+                                            </StackPanel>
+                                            <StackPanel HorizontalAlignment="Center" Width="150" Margin="10">
+                                                <Label Content="Change Password:" HorizontalAlignment="Stretch" Background="AliceBlue"/>
+                                                <TextBlock x:Name="tbEilChange" Background="White" Height="25"/>
+                                                <Button x:Name="btnEaiChange" Background="LightYellow" Content="Change Email"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Grid>
+                            </TabItem>
+                            <TabItem Header="Exercise Plan">
+                                <Grid Background="LightGray">
+                                    <StackPanel HorizontalAlignment="Left">
+                                        <StackPanel VerticalAlignment="Top">
+                                            <DataGrid></DataGrid>
+                                        </StackPanel>
+                                        <StackPanel VerticalAlignment="Bottom">
+                                            
+                                        </StackPanel>
+                                    </StackPanel>
+                                    <StackPanel HorizontalAlignment="Center">
+                                        
+                                    </StackPanel>
+                                    <StackPanel HorizontalAlignment="Right">
+                                        
+                                    </StackPanel>
+                                </Grid>
+                            </TabItem>
+                            <TabItem Header="Exercises">
+                                <Grid Background="LightGray">
+                                    
+                                </Grid>
+                            </TabItem>
+                        </TabControl>
+                    </Grid>
+                    <!--<Grid Margin="3 0 3 0" Height="360" Background="Black">
+                        
+                    </Grid>-->
                 </StackPanel>
             </Border>
             <!--<Border>
