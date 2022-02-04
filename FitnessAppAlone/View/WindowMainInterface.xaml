@@ -27,13 +27,13 @@
                                             </StackPanel>
                                             <StackPanel HorizontalAlignment="Center" Width="150" Margin="10">
                                                 <Label Content="Change User Name:" HorizontalAlignment="Stretch" Background="AliceBlue"/>
-                                                <TextBlock x:Name="tbEmilChange" Background="White" Height="25"/>
-                                                <Button x:Name="btnEmaiChange" Background="LightYellow" Content="Change Email"/>
+                                                <TextBlock x:Name="tbUserNameChange" Background="White" Height="25"/>
+                                                <Button x:Name="btnUserNameChange" Background="LightYellow" Content="Change UserName"/>
                                             </StackPanel>
                                             <StackPanel HorizontalAlignment="Center" Width="150" Margin="10">
                                                 <Label Content="Change Password:" HorizontalAlignment="Stretch" Background="AliceBlue"/>
-                                                <TextBlock x:Name="tbEilChange" Background="White" Height="25"/>
-                                                <Button x:Name="btnEaiChange" Background="LightYellow" Content="Change Email"/>
+                                                <TextBlock x:Name="tbPasswordChange" Background="White" Height="25"/>
+                                                <Button x:Name="btnPasswordChange" Background="LightYellow" Content="Change Password"/>
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
@@ -41,25 +41,63 @@
                             </TabItem>
                             <TabItem Header="Exercise Plan">
                                 <Grid Background="LightGray">
-                                    <StackPanel HorizontalAlignment="Left">
+                                    <StackPanel HorizontalAlignment="Left" Width="220">
                                         <StackPanel VerticalAlignment="Top">
-                                            <DataGrid></DataGrid>
+                                            <Label Content="Exercise Plans" HorizontalAlignment="Center" FontWeight="Bold"/>
+                                            <DataGrid x:Name="dgExercisePlan" ItemsSource="{Binding ExercisePlan}" AutoGenerateColumns="False" Height="230" Margin="5">
+                                                <DataGrid.Columns>
+                                                    <DataGridTextColumn Header="Date" Binding="{Binding Date}"/>
+                                                    <DataGridTextColumn Header="TotalTime" Binding="{Binding TotalTime}"/>
+                                                </DataGrid.Columns>
+                                            </DataGrid>
                                         </StackPanel>
-                                        <StackPanel VerticalAlignment="Bottom">
-                                            
+                                        <StackPanel VerticalAlignment="Bottom" Margin="5">
+                                            <Button x:Name="btnDeleteExercisePlan" Content="Delete Plan" HorizontalAlignment="Center" Height="30"/>
                                         </StackPanel>
                                     </StackPanel>
                                     <StackPanel HorizontalAlignment="Center">
-                                        
+                                        <StackPanel VerticalAlignment="Top" Width="300">
+                                            <Label Content="Exercises" HorizontalAlignment="Center" FontWeight="Bold"/>
+                                            <DataGrid x:Name="dgExercises" ItemsSource="{Binding ExerciseTypes}" AutoGenerateColumns="False" Height="235">
+                                                <DataGrid.Columns>
+                                                    <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                                                    <DataGridTextColumn Header="Description" Binding="{Binding Description}"/>
+                                                    <DataGridTextColumn Header="Equipment" Binding="{Binding Equipment}"/>
+                                                    <DataGridTextColumn Header="TimePrRep" Binding="{Binding TimePrRep}"/>
+
+                                                </DataGrid.Columns>
+                                            </DataGrid>
+                                        </StackPanel>
                                     </StackPanel>
-                                    <StackPanel HorizontalAlignment="Right">
-                                        
+                                    <StackPanel HorizontalAlignment="Right" Width="230">
+                                        <StackPanel HorizontalAlignment="Center" Margin="5">
+                                            <Label Content="Add New Plan" FontWeight="Bold"/>
+                                            <ComboBox x:Name="cbExercisePlans" ItemsSource="{Binding ExercisePlanOverAll}" Background="White" Width="150">
+                                                
+                                            </ComboBox>
+                                        </StackPanel>
+                                        <StackPanel Margin="0 10 0 0" Height="170">
+                                            <Label Content="Exercise Type" FontWeight="Bold" HorizontalAlignment="Center"/>
+                                            <ComboBox x:Name="cbAddExercisePlanType" ItemsSource="{Binding ExerciseType}" Width="150"/>
+                                        </StackPanel>
+                                        <StackPanel VerticalAlignment="Bottom" Margin="0 10 0 0">
+                                            <Label Content="Add ExerciseType To ExercisePlan" HorizontalAlignment="Center" FontWeight="Bold"/>
+                                            <Button x:Name="btnAddExerciseTypeToPlan" Content="Add" HorizontalAlignment="Center" Width="50" Height="25"/>
+                                        </StackPanel>
                                     </StackPanel>
                                 </Grid>
                             </TabItem>
                             <TabItem Header="Exercises">
                                 <Grid Background="LightGray">
-                                    
+                                    <StackPanel HorizontalAlignment="Left" Margin="5">
+                                        <Label Content="Exercise Types" HorizontalAlignment="Center"/>
+                                        <DataGrid x:Name="dgExerciseTypes" ItemsSource="{Binding ExerciseTypeOversigt}">
+                                            
+                                        </DataGrid>
+                                    </StackPanel>
+                                    <StackPanel HorizontalAlignment="Right" Margin="5">
+                                        
+                                    </StackPanel>
                                 </Grid>
                             </TabItem>
                         </TabControl>

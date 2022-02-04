@@ -214,7 +214,7 @@ namespace Funktion
                 data.OpretExerciseType(name, description, equipment, timePrRep);
             }catch(Exception)
             {
-                throw new Exception("Error in Function")
+                throw new Exception("Error in Function");
             }
         }
 
