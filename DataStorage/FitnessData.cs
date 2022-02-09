@@ -93,7 +93,8 @@ namespace DataStorage
 
         public void OpretExerciseType(string name, string description, string equipment, string timePrRep)
         {
-
+            sqlAccess.ExecuteSql($"insert into ExerciseTypes (Name, Description, Equipment, TimePrRep) values ('{name}', '{description}', '{equipment}', {Convert.ToDouble(timePrRep)})");
+            RaisePropertyChanged("ExerciseTypeOversigt");
         }
 
         public void OpretExercise(string repAmount, string timeToDo)

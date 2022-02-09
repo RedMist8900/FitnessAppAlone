@@ -28,6 +28,7 @@ namespace FitnessAppAlone
         {
             //signUp = new WindowSignUp();
             InitializeComponent();
+            func.TestData();
             this.DataContext = func;
         }
 

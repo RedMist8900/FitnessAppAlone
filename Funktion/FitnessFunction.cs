@@ -212,9 +212,9 @@ namespace Funktion
             try
             {
                 data.OpretExerciseType(name, description, equipment, timePrRep);
-            }catch(Exception)
+            }catch(Exception ex)
             {
-                throw new Exception("Error in Function");
+                throw new Exception("Error in Function", ex);
             }
         }
 
@@ -247,6 +247,19 @@ namespace Funktion
             {
                 throw new Exception("Error in Deleting Exercise");
             }
+        }
+
+        public FitnessFunction() { }
+
+        public void TestData()
+        {
+            OpretExerciseType("Upper Arms", "Trains Biceps", "Dumbels", "120");
+            OpretExerciseType("Pecks", "Trains the pecks", "Machine", "122");
+            OpretExerciseType("Upper Legs", "Lunges", "Weights", "120");
+            OpretExerciseType("Abs", "Trains the Stomach Abs", "Nothing", "120");
+
+            OpretUser("Test", "Data", "test@gmail.com");
+            OpretUser("Data", "Test", "data@gmail.com");
         }
     }
 }

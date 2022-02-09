@@ -18,7 +18,7 @@ namespace DataStorage
         public bool Connection()
         {
             string cs; // connection string (shorted for document space)
-            cs = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=FitnessAppDB";
+            cs = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=FitnessAppAlone";
             connection = new SqlConnection();
             connection.ConnectionString = cs;
             try
